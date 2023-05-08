@@ -31,3 +31,11 @@ body {
 img {
 	max-width: 180px;
 }
+
+
+.play-again{
+	display: flex;
+	justify-content: center;
+	translate: transform(-50%, -50%);
+	
+}

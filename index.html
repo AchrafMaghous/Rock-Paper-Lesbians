@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title> Rock Paper Scissors Game</title>
-		<script src="game.js"></script>
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<h1>Rock Paper Scissors</h1>
-		<p>Choose your weapon:</p>
-		<div class="container">
-			<div class="rock">
-				<img src="rock.png">
-				<button onclick="game('rock')" ${gameOver ? "disabled" : ""}>Rock</button>
-			</div>
-			<div class="paper">
-				<img src="paper.png">
-				<button onclick="game('paper')" ${gameOver ? "disabled" : ""}>Paper</button>
-			</div>
-			<div class="scissors">
-				<img src="scissors.png">
-				<button onclick="game('scissors')" ${gameOver ? "disabled" : ""}>Scissors</button>
-			</div>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title> Rock Paper Scissors Game</title>
+	<script src="game.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<h1>Rock Paper Scissors</h1>
+	<p>Choose your weapon:</p>
+	<div class="container">
+		<div class="rock">
+			<img src="rock.png">
+			<button onclick="game('rock')" ${gameOver ? "disabled" : "" }>Rock</button>
 		</div>
-		<div id="result"></div>
-		<div id="score">Score: 0</div>
-		<div>
-			<button id="play-again" style="display:none;">Play Again!</button>
+		<div class="paper">
+			<img src="paper.png">
+			<button onclick="game('paper')" ${gameOver ? "disabled" : "" }>Paper</button>
 		</div>
-		<script>
-			document.getElementById("play-again").addEventListener("click", restartGame)
-		</script>
-	</body>
+		<div class="scissors">
+			<img src="scissors.png">
+			<button onclick="game('scissors')" ${gameOver ? "disabled" : "" }>Scissors</button>
+		</div>
+	</div>
+	<div id="result"></div>
+	<div id="score">Score: 0</div>
+	<div>
+		<button id="play-again" style="display:none; translate: transform(-50%, -50%);" class="play-again">Play
+			Again!</button>
+	</div>
+	<script>
+		document.getElementById("play-again").addEventListener("click", restartGame)
+	</script>
+</body>
+
 </html>
