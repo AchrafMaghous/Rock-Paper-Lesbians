@@ -31,13 +31,19 @@ function updateScore(result) {
 		score++
 	else if (result.includes("lose"))
 		score--;
-	if (score >= 5 || score <= -5) {
-		if (score >= 5) {
+	if (score >= 2 || score <= -2) {
+		if (score >= 2) {
 			document.getElementById("result").innerHTML += "<br>You won!"
-			document.getElementById("play-again").style.display = "block"
-		} else if (score <= -5) {
+			document.getElementById("play-again").style.display = "flex"
+			document.getElementById("play-again").style.margin = "2rem auto"
+
+		} else if (score <= -2) {
 			document.getElementById("result").innerHTML += "<br>You lost!"
-			document.getElementById("play-again").style.display = "block"
+			document.getElementById("play-again").style.display = "flex"
+			document.getElementById("play-again").style.margin = "2rem auto"
+			document.getElementById("play-again").style.borderRadius = "5px"
+			document.getElementById("play-again").style.backgroundColor = "red"
+
 		}
 		gameOver = true;
 	}
