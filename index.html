@@ -2,9 +2,23 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title> Rock Paper Scisors Game</title>
+		<title> Rock Paper Scissors Game</title>
 		<script src="game.js"></script>
 	</head>
 	<body>
+		<h1>Rock Paper Scissors</h1>
+		<p>Choose your weapon:</p>
+		<button onclick="game('rock')" ${gameOver ? "disabled" : ""}>Rock</button>
+		<button onclick="game('paper')" ${gameOver ? "disabled" : ""}>Paper</button>
+		<button onclick="game('scissors')" ${gameOver ? "disabled" : ""}>Scissors</button>
+
+		<div id="result"></div>
+		<div id="score">Score: 0</div>
+		<div>
+			<button id="play-again" style="display:none;">Play Again!</button>
+		</div>
+		<script>
+			document.getElementById("play-again").addEventListener("click", restartGame)
+		</script>
 	</body>
 </html>
